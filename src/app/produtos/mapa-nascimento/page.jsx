@@ -1,5 +1,6 @@
 'use client'
-// src/app/produtos/mapa-nascimento/page.jsx
+
+import React from 'react';
 import Benefits from '../../../components-nascimento/Benefits';
 import FAQ from '../../../components-nascimento/FAQ';
 import Features from '../../../components-nascimento/Features';
@@ -11,14 +12,17 @@ import Pricing from '../../../components-nascimento/Pricing';
 import Testimonials from '../../../components-nascimento/Testimonials';
 
 export default function MapaNascimentoPage() {
-  // Definir o tema para os componentes
+  // Definir o tema para os componentes 
   const theme = {
     primaryColor: "#8B5CF6",
     secondaryColor: "#A78BFA"
   };
-
+  
   return (
     <>
+      {/* Adicionando o Header com o tema correto */}
+      <Header theme={theme} />
+      
       <div className="max-w-7xl mx-auto">
         <main>
           <Hero theme={theme} />

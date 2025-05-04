@@ -27,16 +27,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Header - usado em todas as páginas */}
-        <Header theme={theme} />
-        
+       
         {/* Conteúdo principal */}
         <main>
           {children}
         </main>
-        
-        {/* Footer - usado em todas as páginas */}
-        <Footer theme={theme} />
+         
       </body>
     </html>
   );

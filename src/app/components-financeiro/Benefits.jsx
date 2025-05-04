@@ -1,14 +1,14 @@
 // src/components/Benefits.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import mapaNumericImage from '../assets/images/atendimentoo.png';
-import mapaImage from '../assets/images/mapa.png';
+import mapaImage from '../assets/images/mapaf.png';
 import Image from 'next/image';
 import ModalItem from './ModalItem';
 
 const Benefits = ({ theme = { 
-  primaryColor: "#4A5568", 
-  secondaryColor: "#718096", 
-  tertiaryColor: "#2D3748" 
+  primaryColor: "#2E8B57", 
+  secondaryColor: "#3CB371", 
+  tertiaryColor: "#66CDAA" 
 }}) => {
   // Mantém toda a lógica original de estados e refs
   const [isFirstSectionVisible, setIsFirstSectionVisible] = useState(false);
@@ -222,22 +222,40 @@ const Benefits = ({ theme = {
 
   return (
     <section id="beneficios" className="relative overflow-hidden">
-      {/* Primeira seção - Layout Horizontal com Background Diagonal */}
+      {/* Primeira seção - Layout Horizontal com formas geométricas sutis */}
       <div ref={firstSectionRef} className="relative py-24">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50 transform -skew-y-6 origin-top-left"></div>
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 right-0 w-1/2 h-1/2 opacity-5">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path fill={theme.primaryColor} d="M48.8,-64.9C63.7,-55.8,76.5,-42.5,81.8,-26.5C87.1,-10.5,84.8,8.2,77.8,24.5C70.8,40.8,59.2,54.7,44.4,64.9C29.6,75.1,11.6,81.5,-5.6,79.9C-22.7,78.3,-39.1,68.7,-53.1,56.3C-67.1,43.9,-78.9,28.7,-82.5,11.2C-86.1,-6.3,-81.5,-26.1,-70.2,-39.7C-58.9,-53.4,-40.8,-61,-24.3,-68.9C-7.8,-76.7,7.1,-84.9,22.7,-83.5C38.4,-82.2,54,-74.1,48.8,-64.9Z" transform="translate(100 100)" />
+            </svg>
+          </div>
+          <div className="absolute bottom-0 left-0 w-1/2 h-1/2 opacity-5">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path fill={theme.secondaryColor} d="M40.9,-56.5C51.1,-46.7,56.3,-32.4,60.6,-17.6C64.9,-2.8,68.2,12.6,63.2,25C58.2,37.3,44.8,46.7,30.4,53.4C16,60.1,0.6,64.1,-17.2,63.7C-35,63.2,-55.3,58.3,-65.2,45.6C-75.1,32.8,-74.7,12.1,-70.4,-6.4C-66.1,-24.9,-57.9,-41.2,-45.1,-51.2C-32.3,-61.3,-14.8,-65.1,0.8,-66.1C16.4,-67.1,30.7,-66.3,40.9,-56.5Z" transform="translate(100 100)" />
+            </svg>
+          </div>
         </div>
         
         <div className="relative z-10 container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2 text-center lg:text-left">
-              <div className="inline-block mb-6 px-6 py-2 rounded-full bg-white/50 backdrop-blur-sm border border-gray-200">
-                <span className="font-medium text-gray-700">Insights Numerológicos</span>
+              <div 
+                className="inline-block mb-6 px-6 py-2 rounded-full"
+                style={{ 
+                  background: `linear-gradient(45deg, ${theme.primaryColor}15, ${theme.secondaryColor}15)`,
+                  color: theme.primaryColor
+                }}
+              >
+                <span className="font-medium text-sm tracking-wide uppercase">Insights Numerológicos</span>
               </div>
               
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Mapeando seu<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                <span 
+                  className="font-serif italic"
+                  style={{ color: theme.primaryColor }}
+                >
                   DNA Financeiro
                 </span>
               </h2>
@@ -248,12 +266,25 @@ const Benefits = ({ theme = {
               </p>
 
               <div className="flex items-center justify-center lg:justify-start gap-6">
-                <button className="px-8 py-3 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition">
+                <button 
+                  className="px-8 py-3 rounded-full text-white font-medium shadow-lg transform hover:scale-105 transition-all duration-300"
+                  style={{ 
+                    background: `linear-gradient(45deg, ${theme.primaryColor}, ${theme.secondaryColor})`,
+                  }}
+                >
                   Explorar Agora
                 </button>
                 <div className="flex items-center gap-2 text-gray-600">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <svg 
+                    width="22" 
+                    height="22" 
+                    viewBox="0 0 22 22" 
+                    fill="none" 
+                    xmlns="http://www.w3.org/2000/svg"
+                    style={{ color: theme.primaryColor }}
+                  >
+                    <circle cx="11" cy="11" r="11" fill="currentColor" fillOpacity="0.1"/>
+                    <path d="M7 11L10 14L15 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   <span>100% Personalizado</span>
                 </div>
@@ -261,14 +292,21 @@ const Benefits = ({ theme = {
             </div>
 
             <div className="lg:w-1/2">
-              <div className="grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-1 gap-6">
                 {lifeInsights.map((insight, index) => (
                   <div 
                     key={insight.id} 
-                    className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition"
+                    className="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition group"
+                    style={{ borderLeft: `4px solid ${theme.primaryColor}` }}
                   >
                     <div className="flex items-center gap-6">
-                      <div className="flex-shrink-0 w-16 h-16 rounded-lg border border-gray-200 flex items-center justify-center">
+                      <div 
+                        className="flex-shrink-0 w-16 h-16 rounded-lg flex items-center justify-center"
+                        style={{ 
+                          background: `linear-gradient(45deg, ${theme.primaryColor}15, ${theme.secondaryColor}15)`,
+                          color: theme.primaryColor
+                        }}
+                      >
                         {renderIcon(insight.icon)}
                       </div>
                       <div className="flex-grow">
@@ -291,8 +329,19 @@ const Benefits = ({ theme = {
       </div>
 
       {/* Segunda seção - Layout Vertical com Imagem Circular */}
-      <div ref={secondSectionRef} className="py-24 bg-gradient-to-b from-white to-gray-50">
-        <div className="container mx-auto px-6">
+      <div ref={secondSectionRef} className="py-24 bg-white relative">
+        {/* Adiciona padrão de fundo sutil */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div 
+            className="absolute inset-0 opacity-5"
+            style={{ 
+              backgroundImage: `radial-gradient(${theme.primaryColor} 2px, transparent 2px)`,
+              backgroundSize: '30px 30px'
+            }}
+          />
+        </div>
+      
+        <div className="relative z-10 container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Visão Integral da sua <span style={{ color: theme.primaryColor }}>Energia Financeira</span>
@@ -302,17 +351,36 @@ const Benefits = ({ theme = {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-5">
-              <div className="relative">
-                <div className="w-full aspect-square rounded-full overflow-hidden shadow-2xl">
+              <div className="relative group">
+                {/* Efeito de halo em volta da imagem */}
+                <div 
+                  className="absolute -inset-3 rounded-full opacity-75 blur-lg transition-all duration-500 group-hover:opacity-100"
+                  style={{ background: `linear-gradient(45deg, ${theme.primaryColor}50, ${theme.secondaryColor}50)` }}
+                />
+                
+                <div className="relative w-full aspect-square rounded-full overflow-hidden shadow-2xl border-4 border-white">
                   <Image 
                     src={mapaImage} 
                     alt="Mapa Financeiro" 
                     className="w-full h-full object-cover" 
                   />
+                  
+                  {/* Overlay com gradiente */}
+                  <div 
+                    className="absolute inset-0 opacity-10"
+                    style={{ 
+                      background: `linear-gradient(45deg, ${theme.primaryColor}, transparent)`,
+                    }}
+                  />
                 </div>
-                <div className="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-white shadow-lg flex items-center justify-center">
+                
+                {/* Badge flutuante */}
+                <div 
+                  className="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-white shadow-lg flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110"
+                  style={{ border: `2px solid ${theme.primaryColor}30` }}
+                >
                   <div className="text-center">
                     <div className="text-2xl font-bold" style={{ color: theme.primaryColor }}>PDF</div>
                     <div className="text-xs text-gray-600">Digital</div>
@@ -337,8 +405,16 @@ const Benefits = ({ theme = {
                     text: "Plano de ação para transformar bloqueios em oportunidades de crescimento financeiro."
                   }
                 ].map((item, index) => (
-                  <div key={index} className="flex gap-4">
-                    <div className="flex-shrink-0 w-2 h-2 rounded-full mt-3" style={{ backgroundColor: theme.primaryColor }}></div>
+                  <div key={index} className="flex gap-6">
+                    <div 
+                      className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center"
+                      style={{ 
+                        background: `linear-gradient(45deg, ${theme.primaryColor}15, ${theme.secondaryColor}15)`,
+                        color: theme.primaryColor
+                      }}
+                    >
+                      <span className="text-lg font-bold">{index + 1}</span>
+                    </div>
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                       <p className="text-gray-600">{item.text}</p>
@@ -351,50 +427,91 @@ const Benefits = ({ theme = {
         </div>
       </div>
 
-      {/* Terceira seção - Layout Radial */}
-      <div ref={thirdSectionRef} className="py-24 bg-gray-900 text-white">
-        <div className="container mx-auto px-6">
+      {/* Terceira seção - Layout com Cards - Fundo branco em vez de preto */}
+      <div ref={thirdSectionRef} className="py-24 bg-gray-50 relative">
+        {/* Padrão de fundo sutil */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 opacity-5">
+            <svg width="100%" height="100%">
+              <pattern id="pattern-circles" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
+                <circle id="pattern-circle" cx="25" cy="25" r="12" fill={theme.primaryColor}></circle>
+              </pattern>
+              <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)"></rect>
+            </svg>
+          </div>
+        </div>
+        
+        <div className="relative z-10 container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Componentes da <span className="text-blue-400">Arquitetura Financeira</span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Componentes da <span style={{ color: theme.primaryColor }}>Arquitetura Financeira</span>
             </h2>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Cada elemento trabalha em conjunto para criar sua estratégia personalizada de prosperidade.
             </p>
           </div>
 
           <div className="relative max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {numerologyElements.map((element, index) => (
-                <div key={element.id} className="relative">
-                  <div className="group bg-gray-800 rounded-2xl p-8 hover:bg-gray-700 transition-all duration-300">
-                    <div className="absolute -top-4 -left-4 w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg"
-                         style={{ backgroundColor: element.color }}>
+                <div key={element.id} className="relative group">
+                  <div 
+                    className="absolute -inset-3 rounded-2xl opacity-0 blur-lg transition-all duration-500 group-hover:opacity-75"
+                    style={{ background: element.color }}
+                  />
+                  
+                  <div 
+                    className="relative bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 h-full flex flex-col"
+                  >
+                    <div 
+                      className="absolute -top-6 -left-6 w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg text-white"
+                      style={{ backgroundColor: element.color }}
+                    >
                       {renderIcon(element.icon)}
                     </div>
                     
                     <div className="mt-8">
-                      <h3 className="text-2xl font-bold mb-3">{element.title}</h3>
-                      <p className="text-gray-400 mb-6">{element.description}</p>
+                      <h3 className="text-2xl font-bold mb-3 text-gray-900">{element.title}</h3>
+                      <p className="text-gray-600 mb-6">{element.description}</p>
                       
-                      <button 
-                        onClick={() => setActiveModal(element.id)}
-                        className="inline-flex items-center text-white hover:text-blue-400 transition"
-                      >
-                        <span>Descobrir mais</span>
-                        <svg 
-                          className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" 
-                          fill="none" 
-                          stroke="currentColor" 
-                          viewBox="0 0 24 24"
+                      <div className="mt-auto">
+                        <button 
+                          onClick={() => setActiveModal(element.id)}
+                          className="inline-flex items-center font-medium transition"
+                          style={{ color: element.color }}
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </button>
+                          <span>Descobrir mais</span>
+                          <svg 
+                            className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                          </svg>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+          
+          {/* Adiciona um indicador de rodapé */}
+          <div className="mt-16 text-center">
+            <div className="inline-flex items-center gap-3 bg-white rounded-full px-6 py-3 shadow-md">
+              <svg 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ color: theme.primaryColor }}
+              >
+                <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span className="text-gray-700">Orientação personalizada para sua jornada de prosperidade</span>
             </div>
           </div>
         </div>
