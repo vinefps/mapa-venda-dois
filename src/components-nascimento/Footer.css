@@ -1,0 +1,138 @@
+/* src/components/Footer.css */
+
+/* Estilos isolados para o footer */
+.site-footer {
+    background: linear-gradient(to bottom, #111827, #000);
+    color: white;
+    padding: 4rem 0 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Fundo com linhas animadas */
+.footer-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.footer-grid-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Logo */
+.footer-brand {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+/* Links */
+.footer-links-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-links-title:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    border-radius: 3px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-link {
+    color: #a1a1aa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+/* Social icons */
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Footer bottom */
+.footer-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 2rem 0;
+}
+
+.footer-copyright {
+    color: #a1a1aa;
+    font-size: 0.875rem;
+}
+
+.footer-tagline {
+    color: #a1a1aa;
+    font-size: 0.875rem;
+}
+
+.footer-heart {
+    color: #ef4444;
+    display: inline-block;
+}
+
+/* Disclaimer */
+.footer-disclaimer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.disclaimer-text {
+    color: #71717a;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+}

@@ -1,0 +1,167 @@
+/* src/components/FAQ.css */
+
+/* Background e padrões relacionados à numerologia */
+.faq-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b5cf6' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='30' fill-opacity='0.03' fill='%238b5cf6' text-anchor='middle' dominant-baseline='middle'%3E1%3C/text%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='30' fill-opacity='0.03' fill='%238b5cf6' text-anchor='middle' dominant-baseline='middle'%3E7%3C/text%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='30' fill-opacity='0.03' fill='%238b5cf6' text-anchor='middle' dominant-baseline='middle'%3E9%3C/text%3E%3C/svg%3E");
+    background-position:
+        0 0,
+        100px 50px,
+        200px 150px,
+        300px 100px;
+    opacity: 0.7;
+}
+
+/* Animações de entrada */
+.faq-header,
+.faq-container,
+.faq-contact,
+.faq-cta {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.faq-header.is-visible,
+.faq-container.is-visible,
+.faq-contact.is-visible,
+.faq-cta.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.faq-container.is-visible {
+    transition-delay: 0.2s;
+}
+
+.faq-contact.is-visible {
+    transition-delay: 0.4s;
+}
+
+.faq-cta.is-visible {
+    transition-delay: 0.5s;
+}
+
+/* Animação dos itens de FAQ */
+.faq-item {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s ease-out;
+}
+
+.faq-container.is-visible .faq-item {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Efeito de hover nos itens */
+.faq-item:hover {
+    transform: translateY(-2px);
+}
+
+.faq-item.is-expanded {
+    transform: translateY(-2px);
+}
+
+/* Efeito de transição para a resposta */
+.faq-answer {
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+}
+
+.faq-item.is-expanded .faq-answer {
+    opacity: 1;
+}
+
+/* Efeito de brilho no botão CTA */
+.faq-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: rotate(30deg);
+    opacity: 0;
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.faq-button:hover::after {
+    opacity: 1;
+    transform: rotate(30deg) translate(100%, -100%);
+}
+
+/* Decoração numerológica */
+.numerology-symbol {
+    position: absolute;
+    font-family: serif;
+    opacity: 0.05;
+    color: #8B5CF6;
+    z-index: 0;
+}
+
+.symbol-1 {
+    top: 10%;
+    left: 5%;
+    font-size: 8rem;
+    transform: rotate(-10deg);
+}
+
+.symbol-3 {
+    top: 60%;
+    right: 8%;
+    font-size: 10rem;
+    transform: rotate(15deg);
+}
+
+.symbol-7 {
+    bottom: 15%;
+    left: 10%;
+    font-size: 9rem;
+    transform: rotate(5deg);
+}
+
+.symbol-9 {
+    top: 30%;
+    right: 5%;
+    font-size: 7rem;
+    transform: rotate(-5deg);
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .faq-question {
+        font-size: 15px;
+        padding: 16px;
+    }
+
+    .faq-answer {
+        padding: 0 16px 16px;
+    }
+
+    .numerology-symbol {
+        display: none;
+    }
+}

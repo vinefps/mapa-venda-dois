@@ -1,0 +1,60 @@
+/* src/components/Header.css */
+
+/* Animação para o glow do logo */
+.logo-container:hover .logo-glow {
+    opacity: 0.7;
+}
+
+/* Estilo para o link ativo */
+.nav-link.nav-active {
+    font-weight: 500;
+}
+
+/* Estilos para garantir que o header não estenda além da largura da tela */
+header {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Garantir que o menu mobile não cause overflow horizontal */
+@media (max-width: 1023px) {
+
+    header nav,
+    header .container,
+    header div[ref="mobileMenuRef"] {
+        max-width: 100vw;
+        width: 100%;
+    }
+}
+
+/* Remover scroll horizontal em telas pequenas */
+body {
+    overflow-x: hidden;
+}
+
+/* Animação do gradiente do header */
+.header-gradient {
+    background-size: 200% 100%;
+    animation: gradient-shift 6s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Estilos para garantir que os elementos do menu mobile fiquem dentro dos limites */
+.container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}

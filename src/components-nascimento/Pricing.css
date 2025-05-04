@@ -1,0 +1,162 @@
+/* src/components/Pricing.css */
+
+/* Estilos para os elementos do contador */
+.countdown-item {
+    background-color: rgba(139, 92, 246, 0.1);
+    border-radius: 8px;
+    padding: 10px 12px;
+    min-width: 70px;
+    text-align: center;
+}
+
+.countdown-value {
+    font-size: 1.75rem;
+    line-height: 1;
+    font-weight: 700;
+    color: #6D28D9;
+}
+
+.countdown-label {
+    font-size: 0.75rem;
+    color: #7C3AED;
+    margin-top: 2px;
+    font-weight: 500;
+}
+
+.countdown-separator {
+    font-weight: bold;
+    color: #6D28D9;
+    padding-bottom: 10px;
+}
+
+/* Estilo para o card de preço */
+.pricing-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Padrão de fundo relacionado à numerologia */
+.pricing-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b5cf6' fill-opacity='0.05'%3E%3Cpath d='M30 5C27.5 5 27.5 10 25 10S20 5 20 5 20 10 17.5 10 12.5 5 12.5 5s0 5-2.5 5S5 5 5 5s0 5-2.5 5S0 5 0 5v5c0 2.5 5 2.5 5 5s-5 5-5 7.5V30c2.5 0 2.5-5 5-5s5 5 5 5-2.5 5-5 7.5c0 2.5 5 2.5 5 5s-5 5-5 5c0 2.5 5 2.5 5 5s-5 5-5 5h5c2.5-2.5 2.5-5 5-5s5 2.5 7.5 5H30c0-2.5-5-2.5-5-5s5-2.5 5-5-5-2.5-5-5 5-2.5 5-5c-2.5 0-2.5 5-5 5s-5-5-5-5c0-2.5 5-2.5 5-5s-5-2.5-5-5 5-2.5 5-5-5-2.5-5-5 5-2.5 5-5-5-2.5-5-5 5-2.5 5-5-5-2.5-5-5z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Estilos para os ícones de pagamento */
+.payment-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Animações para elementos */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Botão CTA com efeito de hover */
+.cta-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+.cta-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.cta-button:hover::after {
+    transform: translateX(100%);
+}
+
+/* Números decorativos para tema de numerologia */
+.number-decoration {
+    font-family: 'Georgia', serif;
+    position: absolute;
+    opacity: 0.05;
+    color: #8B5CF6;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
+}
+
+.number-1 {
+    top: 10%;
+    left: 5%;
+    font-size: 8rem;
+    transform: rotate(-15deg);
+}
+
+.number-7 {
+    top: 20%;
+    right: 7%;
+    font-size: 10rem;
+    transform: rotate(10deg);
+}
+
+.number-9 {
+    bottom: 15%;
+    left: 8%;
+    font-size: 9rem;
+    transform: rotate(5deg);
+}
+
+.number-4 {
+    bottom: 10%;
+    right: 10%;
+    font-size: 7rem;
+    transform: rotate(-5deg);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    /* Ajustes existentes */
+    .countdown-item {
+        min-width: 50px;
+        padding: 6px 8px;
+    }
+
+    .countdown-value {
+        font-size: 1.3rem;
+    }
+
+    /* Novos ajustes */
+    .pricing-card {
+        margin: 0 -15px;
+        /* Compensar padding do container */
+        border-radius: 0;
+        /* Remover bordas arredondadas em mobile */
+    }
+
+    .number-decoration {
+        display: none;
+    }
+}
