@@ -176,7 +176,7 @@ const Hero = ({ theme = { primaryColor: "#2E8B57", secondaryColor: "#3CB371" } }
             >
               <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            <span className="text-gray-700">Entrega imediata por email em formato PDF</span>
+            <span className="text-gray-700">Entrega em até 3 dias em formato de PDF</span>
           </div>
         </div>
       </div>

@@ -57,7 +57,7 @@ const FAQ = ({ theme = { primaryColor: "#2E8B57", secondaryColor: "#3CB371" } })
     },
     {
       question: "Quanto tempo demora para receber meu mapa?",
-      answer: "Você receberá seu Mapa da Energia Financeira em até 24 horas após a confirmação do pagamento. Em períodos de grande demanda, esse prazo pode se estender para até 48 horas, mas você será informado caso isso ocorra."
+      answer: "Você receberá seu Mapa da Energia Financeira em até 72 horas após a confirmação do pagamento. Em períodos de grande demanda, mas você será informado caso isso ocorra."
     },
     {
       question: "Como receberei meu mapa?",

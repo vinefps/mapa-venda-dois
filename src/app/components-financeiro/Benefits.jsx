@@ -290,40 +290,6 @@ const Benefits = ({ theme = {
                 </div>
               </div>
             </div>
-
-            <div className="lg:w-1/2">
-              <div className="grid grid-cols-1 gap-6">
-                {lifeInsights.map((insight, index) => (
-                  <div 
-                    key={insight.id} 
-                    className="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition group"
-                    style={{ borderLeft: `4px solid ${theme.primaryColor}` }}
-                  >
-                    <div className="flex items-center gap-6">
-                      <div 
-                        className="flex-shrink-0 w-16 h-16 rounded-lg flex items-center justify-center"
-                        style={{ 
-                          background: `linear-gradient(45deg, ${theme.primaryColor}15, ${theme.secondaryColor}15)`,
-                          color: theme.primaryColor
-                        }}
-                      >
-                        {renderIcon(insight.icon)}
-                      </div>
-                      <div className="flex-grow">
-                        <h3 className="text-lg font-bold text-gray-900">{insight.title}</h3>
-                        <p className="text-gray-600 text-sm mt-1">{insight.description}</p>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-3xl font-bold" style={{ color: theme.primaryColor }}>
-                          {insight.stat}
-                        </div>
-                        <div className="text-xs text-gray-500 mt-1">{insight.statDesc}</div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>

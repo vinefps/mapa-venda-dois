@@ -268,7 +268,7 @@ const Pricing = ({ theme = { primaryColor: "#2E8B57", secondaryColor: "#3CB371",
                     <div>
                       <h5 className="text-base md:text-lg font-semibold text-gray-800 mb-2 text-center md:text-left">Formato da entrega:</h5>
                       <p className="text-green-800 text-xs md:text-sm">
-                        O Mapa da Energia Financeira será entregue em formato PDF completo e autoexplicativo, enviado para seu e-mail. <strong>Não há sessões de devolutiva ou consulta incluídas</strong> neste valor. Todas as informações necessárias para transformar sua relação com o dinheiro estarão detalhadas no documento.
+                        O Mapa da Energia Financeira será entregue em formato PDF completo e autoexplicativo, enviado para seu e-mail ou whatsapp. <strong>Não há sessões de devolutiva ou consulta incluídas</strong> neste valor. Todas as informações necessárias para transformar sua relação com o dinheiro estarão detalhadas no documento.
                       </p>
                     </div>
                   </div>
@@ -339,7 +339,7 @@ const Pricing = ({ theme = { primaryColor: "#2E8B57", secondaryColor: "#3CB371",
 
         {/* Testemunhos rápidos ou social proof */}
         <div className={`max-w-4xl mx-auto mt-6 md:mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          {['Mais de 200 mapas entregues', 'Precisão de 98% confirmada', 'Resultados em até 90 dias'].map((item, index) => (
+          {['Mais de 200 mapas entregues', 'Precisão de 98% confirmada'].map((item, index) => (
             <div key={index} className="bg-white bg-opacity-50 backdrop-blur-sm p-3 md:p-4 rounded-lg md:rounded-xl text-center border border-gray-100">
               <p className="text-xs md:text-sm text-gray-700 font-medium">
                 <svg className="inline-block w-3 h-3 md:w-4 md:h-4 mr-1 mb-1" style={{ color: theme.accentColor }} fill="currentColor" viewBox="0 0 20 20">
