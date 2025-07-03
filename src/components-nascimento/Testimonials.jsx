@@ -1,6 +1,6 @@
 'use client'
 // src/components/Testimonials.jsx
-import p1 from '../app/assets/images/test1.png';
+import p1 from '../app/assets/images/test2.png';
 import p2 from '../app/assets/images/test2.png';
 import p3 from '../app/assets/images/test3.png';
 import p4 from '../app/assets/images/test4.png';
@@ -98,11 +98,6 @@ const Testimonials = () => {
           <div className="bg-purple-50 rounded-xl p-8 md:p-12 shadow-lg">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
               <div className="md:w-1/4 flex flex-col items-center">
-                <img 
-                  src={testimonials[activeIndex].image} 
-                  alt={testimonials[activeIndex].name} 
-                  className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-lg"
-                />
                 <h3 className="mt-4 font-bold text-gray-800 text-center">{testimonials[activeIndex].name}</h3>
                 <p className="text-sm text-gray-500 text-center">{testimonials[activeIndex].location}</p>
                 <div className="flex mt-2">
