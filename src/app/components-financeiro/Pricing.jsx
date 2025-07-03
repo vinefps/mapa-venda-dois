@@ -161,7 +161,7 @@ const Pricing = ({ theme = { primaryColor: "#2E8B57", secondaryColor: "#3CB371",
             {/* Badge de desconto */}
             <div className="absolute -top-5 -right-5 z-20 md:block hidden">
               <div className="bg-green-600 text-white px-6 py-2 rounded-full shadow-lg transform rotate-12 font-bold">
-                32% OFF
+              40% OFF
               </div>
             </div>
 
@@ -181,18 +181,18 @@ const Pricing = ({ theme = { primaryColor: "#2E8B57", secondaryColor: "#3CB371",
                   <div className="mt-4 md:mt-0 text-center md:text-right">
                     <div className="inline-flex flex-col items-end">
                       <span className="text-gray-500 line-through text-lg">
-                        {formatCurrency(247.00)}
+                        {formatCurrency(247.50)}
                       </span>
                       <div className="flex items-end gap-2">
                         <span className="text-3xl md:text-5xl font-bold" style={{ color: theme.accentColor }}>
-                          {formatCurrency(167.90).split(',')[0]}
+                          {formatCurrency(147.50).split(',')[0]}
                         </span>
                         <span className="text-lg md:text-xl font-bold mb-1" style={{ color: theme.accentColor }}>
-                          ,{formatCurrency(167.90).split(',')[1]}
+                          ,{formatCurrency(147.50).split(',')[1]}
                         </span>
                       </div>
                       <span className="text-base md:text-lg font-medium" style={{ color: theme.accentColor }}>
-                        ou 12x de {formatCurrency(16.62)}
+                        ou 10x de {formatCurrency(16.62)}
                       </span>
                     </div>
                   </div>

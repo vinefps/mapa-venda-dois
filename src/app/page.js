@@ -278,17 +278,17 @@ export default function HomePage() {
 
                 <div className="flex justify-between items-end mb-6">
                   <div>
-                    <span className="text-gray-400 line-through text-sm">R$ 210,70</span>
+                    <span className="text-gray-400 line-through text-sm">R$ 310,70</span>
                     <div className="text-2xl font-bold" style={{ color: theme.primaryColor }}>
-                      R$ 147,50
+                      R$ 197,50
                     </div>
                     <div className="text-sm text-gray-500">
-                      ou 12x de R$ 14,63
+                      ou 10x de R$ 23,74
                     </div>
                   </div>
 
                   <div className="px-3 py-1 rounded-full text-white text-xs" style={{ background: theme.primaryColor }}>
-                    30% OFF
+                    36% OFF
                   </div>
                 </div>
 
@@ -357,17 +357,17 @@ export default function HomePage() {
 
                 <div className="flex justify-between items-end mb-6">
                   <div>
-                    <span className="text-gray-400 line-through text-sm">R$ 247,00</span>
+                    <span className="text-gray-400 line-through text-sm">R$ 247,50</span>
                     <div className="text-2xl font-bold" style={{ color: theme.primaryFinance }}>
-                      R$ 167,90
+                      R$ 147,50
                     </div>
                     <div className="text-sm text-gray-500">
-                      ou 12x de R$ 16,62
+                      ou 10x de R$ 16,62
                     </div>
                   </div>
 
                   <div className="px-3 py-1 rounded-full text-white text-xs" style={{ background: theme.primaryFinance }}>
-                    32% OFF
+                    40% OFF
                   </div>
                 </div>
 
@@ -389,81 +389,6 @@ export default function HomePage() {
                     Comprar agora
                   </a>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Pacote com os dois produtos */}
-          <div className="mt-12 bg-gradient-to-r from-purple-50 to-green-50 rounded-xl p-8 shadow-md">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold mb-2" style={{
-                background: `-webkit-linear-gradient(135deg, ${theme.primaryColor}, ${theme.primaryFinance})`,
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
-              }}>
-                Pacote Completo: Ambos os Mapas
-              </h3>
-              <p className="text-gray-700">Transformação completa: autoconhecimento + prosperidade financeira</p>
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-8 items-center mb-8">
-              <div className="md:w-1/2">
-                <p className="text-gray-700 mb-4">
-                  Adquira os dois mapas juntos e tenha uma visão completa de quem você é e como
-                  manifestar prosperidade financeira em alinhamento com seu propósito de vida.
-                </p>
-
-                <ul className="space-y-2 mb-4">
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                    </svg>
-                    <span className="text-gray-700">Entenda seus talentos e bloqueios</span>
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 mr-2 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                    </svg>
-                    <span className="text-gray-700">Alinhe finanças com propósito</span>
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                    </svg>
-                    <span className="text-gray-700">Economize na compra do pacote</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="md:w-1/2 bg-white p-6 rounded-xl shadow-md">
-                <div className="flex justify-center items-baseline mb-4">
-                  <span className="text-gray-400 line-through mr-4 text-xl">R$ 315,40</span>
-                  <span className="text-3xl font-bold" style={{
-                    background: `-webkit-linear-gradient(135deg, ${theme.primaryColor}, ${theme.primaryFinance})`,
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent'
-                  }}>
-                    R$ 279,90
-                  </span>
-                </div>
-
-                <p className="text-sm text-gray-500 text-center mb-4">
-                  Economize R$ 35,50 na compra do pacote completo
-                </p>
-
-                <a
-                  href="#" // Substitua pelo link de checkout do pacote
-                  className="block w-full py-3 text-center rounded-lg text-white font-medium transition-all duration-300 hover:shadow-lg mb-3"
-                  style={{
-                    background: `linear-gradient(135deg, ${theme.primaryColor}, ${theme.primaryFinance})`
-                  }}
-                >
-                  Adquirir pacote completo
-                </a>
-
-                <p className="text-xs text-gray-500 text-center">
-                  Entrega em até 24 horas após a confirmação do pagamento
-                </p>
               </div>
             </div>
           </div>
@@ -684,16 +609,6 @@ export default function HomePage() {
                     >
                       Mapa da Energia Financeira
                     </a>
-
-                    <a
-                      href="#" // Link para o pacote
-                      className="block px-6 py-3 rounded-lg text-white text-center font-medium transition-all hover:shadow-lg"
-                      style={{
-                        background: `linear-gradient(135deg, ${theme.primaryColor}, ${theme.primaryFinance})`
-                      }}
-                    >
-                      Pacote Completo - Economize!
-                    </a>
                   </div>
                 </div>
               </div>
@@ -703,7 +618,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      
+
       {/* CSS Styles */}
       <style jsx>{`
         @keyframes float-slow {
